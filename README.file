@@ -1,0 +1,1 @@
+# So far, I have managed to read in the data correctly and process each student into a student object. Multiple student objects are added in the Class class. Next, I will start to build the algorithm in the Class class that actually sorts the students accordingly. 
