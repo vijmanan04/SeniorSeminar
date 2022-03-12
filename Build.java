@@ -38,14 +38,14 @@ public class Build { // Builds the program and processes necessary data
 
 		}
 
-		for (int i = 3; i < sessions.size(); i+=3){
-			ArrayList<String> preProcessing = new ArrayList<String>();
-			preProcessing.add(sessions.get(i));
-			preProcessing.add(sessions.get(i+1));
-			preProcessing.add(sessions.get(i+2));
+		for (int i = 3; i < sessions.size(); i+=3){ // start at 3 because the first 3 are just headers; increment 3 because 3 columns
+			ArrayList<String> preProcessing = new ArrayList<String>(); // temporary ArrayList for prcoessing
+			preProcessing.add(sessions.get(i)); // add information pertinenet to one presenter
+			preProcessing.add(sessions.get(i+1)); // add information pertinenet to one presenter
+			preProcessing.add(sessions.get(i+2)); // add information pertinenet to one presenter
 
-			c1.addSession(preProcessing);
-			preProcessing = new ArrayList<String>();
+			c1.addSession(preProcessing); // add all the pertinenent information to one presenter as an ArrayList 
+			preProcessing = new ArrayList<String>(); // reset the preProcessing ArrayList
 		}
 
 		c1.showSessions(); // shows class
