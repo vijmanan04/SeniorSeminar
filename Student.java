@@ -7,9 +7,13 @@ public class Student{
 		this.choices = new int[info.length - 2]; // everything except first 2 indexes are part of student choices
 		this.lastName = info[0];
 		this.firstName = info[1];
-		
+
 		for (int i = 0; i < info.length - 2; i++){
-			this.choices[i] = Integer.parseInt(info[i+2]); // covnvert each choice to an int for easier comparison later 
+			this.choices[i] = Integer.parseInt(info[i+2]); // covnvert each choice to an int for easier comparison later
 		}
+	}
+
+	public String toString(){
+		return "Name: " + this.firstName + " " + this.lastName + " Choices: " + choices;
 	}
 }
