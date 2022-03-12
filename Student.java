@@ -13,7 +13,7 @@ public class Student{
 		}
 	}
 
-	public String toString(){
+	public String toString(){ // add toString to get information on a student, not just pointer in memory when printing
 		return "Name: " + this.firstName + " " + this.lastName + " Choices: " + choices;
 	}
 }
