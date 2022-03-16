@@ -12,8 +12,12 @@ public class Student{
 			this.choices[i] = Integer.parseInt(info[i+2]); // covnvert each choice to an int for easier comparison later
 		}
 	}
+	
+	public int[] getChoices(){
+		return choices;
+	}
 
 	public String toString(){ // add toString to get information on a student, not just pointer in memory when printing
-		return "Name: " + this.firstName + " " + this.lastName + " Choices: " + choices;
+		return "Name: " + this.firstName + " " + this.lastName + " Choices: " + this.choices;
 	}
 }
