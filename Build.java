@@ -37,6 +37,18 @@ public class Build { // Builds the program and processes necessary data
 			c1.addStudent( new Student(preProcessing) ); // add the student to the class
 
 		}
+		
+		
+		for (int i = 3; i < sessions.size(); i+=3){
+			String[] preProcessing = new String[3];
+			preProcessing[0] = sessions.get(i);
+			preProcessing[1] = sessions.get(i+1);
+			preProcessing[2] = sessions.get(i+2);
+			c1.addSession( new Speaker(preProcessing) ); // add the student to the class
+
+		}
+		
+		/*
 
 		for (int i = 3; i < sessions.size(); i+=3){ // start at 3 because the first 3 are just headers; increment 3 because 3 columns
 			ArrayList<String> preProcessing = new ArrayList<String>(); // temporary ArrayList for prcoessing
@@ -47,8 +59,9 @@ public class Build { // Builds the program and processes necessary data
 			c1.addSession(preProcessing); // add all the pertinenent information to one presenter as an ArrayList 
 			preProcessing = new ArrayList<String>(); // reset the preProcessing ArrayList
 		}
+		*/
 
-		c1.showSessions(); // shows class
+		c1.makeSessions(); // shows class
 
 	}
 }
