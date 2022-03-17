@@ -34,11 +34,12 @@ public class Build { // Builds the program and processes necessary data
 		for (int i = 1; i < surveyAnswers.size(); i++){
 			String[] preProcessing = surveyAnswers.get(i).split(","); // split the string at each comma, since information is split by commas
 			//System.out.println(preProcessing);
+
 			c1.addStudent( new Student(preProcessing) ); // add the student to the class
 
 		}
-		
-		
+
+
 		for (int i = 3; i < sessions.size(); i+=3){
 			String[] preProcessing = new String[3];
 			preProcessing[0] = sessions.get(i);
@@ -47,7 +48,7 @@ public class Build { // Builds the program and processes necessary data
 			c1.addSession( new Speaker(preProcessing) ); // add the student to the class
 
 		}
-		
+
 		/*
 
 		for (int i = 3; i < sessions.size(); i+=3){ // start at 3 because the first 3 are just headers; increment 3 because 3 columns
@@ -56,7 +57,7 @@ public class Build { // Builds the program and processes necessary data
 			preProcessing.add(sessions.get(i+1)); // add information pertinenet to one presenter
 			preProcessing.add(sessions.get(i+2)); // add information pertinenet to one presenter
 
-			c1.addSession(preProcessing); // add all the pertinenent information to one presenter as an ArrayList 
+			c1.addSession(preProcessing); // add all the pertinenent information to one presenter as an ArrayList
 			preProcessing = new ArrayList<String>(); // reset the preProcessing ArrayList
 		}
 		*/
