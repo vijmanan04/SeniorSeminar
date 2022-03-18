@@ -1,3 +1,5 @@
+// This file is like a driver for the whole program because it "builds" the schedule for the day
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.File; // used to read in .csv files
