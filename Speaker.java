@@ -1,3 +1,4 @@
+// This file contains information for the speaker
 import java.util.ArrayList;
 public class Speaker{
 	private String lastName;
