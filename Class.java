@@ -1,3 +1,4 @@
+// This file is the one that contains all the logical functions for the program for making the class and organizing the speakers and students
 import java.util.ArrayList;
 import java.util.Arrays;
 public class Class {
