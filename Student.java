@@ -1,3 +1,4 @@
+// This file contains information for each individual student
 import java.util.ArrayList;
 public class Student{
 	private String lastName;
