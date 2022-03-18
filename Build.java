@@ -41,7 +41,7 @@ public class Build { // Builds the program and processes necessary data
 
 
 		for (int i = 3; i < sessions.size(); i+=3){
-			String[] preProcessing = new String[3];
+			String[] preProcessing = new String[3]; // only want first 3 datapoints for each speaker, since sessions data has 3 columns
 			preProcessing[0] = sessions.get(i);
 			preProcessing[1] = sessions.get(i+1);
 			preProcessing[2] = sessions.get(i+2);
@@ -49,20 +49,11 @@ public class Build { // Builds the program and processes necessary data
 
 		}
 
-		/*
 
-		for (int i = 3; i < sessions.size(); i+=3){ // start at 3 because the first 3 are just headers; increment 3 because 3 columns
-			ArrayList<String> preProcessing = new ArrayList<String>(); // temporary ArrayList for prcoessing
-			preProcessing.add(sessions.get(i)); // add information pertinenet to one presenter
-			preProcessing.add(sessions.get(i+1)); // add information pertinenet to one presenter
-			preProcessing.add(sessions.get(i+2)); // add information pertinenet to one presenter
+		ArrayList<ArrayList<Integer>> sesh = c1.makeSessions(); // make the sessions for the speakers first
+		c1.placeStudents(sesh); // witht the sessions made, optimzie student placement
+		c1.showSchedule(); // print schdule
 
-			c1.addSession(preProcessing); // add all the pertinenent information to one presenter as an ArrayList
-			preProcessing = new ArrayList<String>(); // reset the preProcessing ArrayList
-		}
-		*/
-
-		c1.makeSessions(); // shows class
 
 	}
 }
